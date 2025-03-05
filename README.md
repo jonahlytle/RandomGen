@@ -1,8 +1,8 @@
 Please describe how you might implement this more "pythonically"
 
 - Utilise existing packages to optimise!
-- Use decimal.Decimal for high precision on the provided Probabilities to ensure that they sum to exactly 1.
-- To optimise the selection of the random element (currently (O(n))) there are a few levels of optimisations:
+  - Use decimal.Decimal for high precision on the provided Probabilities to ensure that they sum to exactly 1.
+  - To optimise the selection of the random element (currently (O(n))) there are a few levels of optimisations:
 
   1: (O(log n)) solution -> Use itertools.accumulate() to create a cumulative probability on initialisation and use bisect.bisect() to use binary search to iterate through and select the element.
 
